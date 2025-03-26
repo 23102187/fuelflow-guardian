@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
-import { Calendar, Download, FileText, Filter, FileSpreadsheet, FilePdf, Clock, Droplet, TrendingUp, TrendingDown, AlertTriangle, RefreshCcw, ChevronDown, Mail } from 'lucide-react';
+import { Calendar, Download, FileText, Filter, FileSpreadsheet, Clock, Droplet, TrendingUp, TrendingDown, AlertTriangle, RefreshCcw, ChevronDown, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const reportsData = {
@@ -390,7 +389,7 @@ const Reports = () => {
                   report.type === 'CSV' ? "bg-status-success/10 text-status-success" : 
                   "bg-fuel-blue-100 dark:bg-fuel-blue-900/30 text-fuel-blue-500"
                 )}>
-                  {report.type === 'PDF' ? <FilePdf size={24} /> : 
+                  {report.type === 'PDF' ? <FileText size={24} /> : 
                    report.type === 'CSV' ? <FileText size={24} /> : 
                    <FileSpreadsheet size={24} />}
                 </div>
